@@ -71,9 +71,13 @@
 
 ## ❗ 프로젝트 진행
 
+<details>
+
 - [0주차](https://www.youtube.com/watch?v=A76W9kts5u4) - 오리엔테이션 & 팀 빌딩
 
     개발자의 품격님이 임의로 지정해주신 팀원을 바탕으로 오리엔테이션을 진행하였습니다.
+</details>
+
 
 - [1주차](https://www.youtube.com/watch?v=JmbHsfjhjSY&list=PLqbWuGdVBJd1bukVXopWjl5mUevBtj04h&index=3) - 아이템 선정 및 발표
 
