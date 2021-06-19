@@ -62,8 +62,8 @@
 
 <div>
 <img src="https://user-images.githubusercontent.com/44861205/122632213-57ee9b80-d10c-11eb-9bad-b6125c2ca389.jpeg" align="left" height="450" width="1100" />    
-</div>
-<div><br/></div><div></div><div></div><div></div><div></div>
+</div>   
+
 
 
 ## API DOCS
