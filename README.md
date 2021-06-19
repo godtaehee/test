@@ -1,155 +1,173 @@
-# 알바로그 (Node.js)
+# <div align="center">Albalog</div>
 
-## ⏳기간
+### <div align="center">사장님과 알바생의 편한 업무 관리를 위한 웹앱</div>
 
-### 2021.04 ~ ing
 
-## 😀 스토리
+<div align="center">Albalog를 통해서 편안한 업무관리, 급여관리, 스케줄관리, 출-퇴근관리를 해보세요😁 
+</div>  
 
-아르바이트를 진행하면서 사장님들과 알바생들 사이에서 일어날수 있는 모든 Issue를 관리해주는 웹 애플리케이션을 만들고자 진행되는 프로젝트입니다. 제가 발표했던 아이디어는 아니였지만 저도 알바를 정말 많이 해봐서 너무나도 괜찮은 주제라고 생각하게되어 팀원으로써 참여하게되었습니다.
 
-## 🌐 [웹페이지](https://dashboard.heroku.com/apps/albalog-test) (Baek-End)
+<img src="https://user-images.githubusercontent.com/64634992/122313912-13b79b80-cf52-11eb-900a-a1d50bb073f9.png" />  
 
-## 🙋‍♂️ Github
 
-[AlbalogTeam](https://github.com/AlbalogTeam)
 
-## 🎲 역할
 
-- Back-End
-- Resolve Git and Github Issue
+## Albalog 기능
 
-## ⚒️ 기술스택
 
-- Node.js
-- Express
-- MongoDB
+#### 관리자
+
+
+- 매장 관리 ( 매장등록, 매장수정, 직원초대)
+
+
+- 직원 관리 ( 시급설정, 자동급여계산, 급여 내역 조회)
+
+
+- 스케줄 관리 ( 근무 일정 관리, 출-퇴근 관리)
+
+
+- 공지사항 등록
+
+
+- 업무 매뉴얼 관리
+
+
+#### 알바( or 직원)
+
+
+- 출-퇴근 기능
+
+
+- 개인/전체 스케줄 확인 , 스케줄 변경 신청
+
+
+- 근무 시간 조회
+
+
+- 급여 내역 조회
+
+
+- 인수인계(메모) 기능
+
+
+<br/>  
+
+## UI/UX
+완성되면 업로드😂😂😂
+<br />
+
+
+## DataBase
+
+
+<img src="https://user-images.githubusercontent.com/64634992/121452799-05f69900-c9db-11eb-9cc1-a8b569f6d539.png" align="left" height="450" width="1100" />    
+
+📕📕
+<br/>
+
+
+## API DOCS
+완성되면 업로드😂😂😂
+<br />
+
+## 개발 스택
+
+
+### Front-End
+
+- React
+- Redux
+- Redux-toolkit
+- SCSS
+- ckeditor5
+
+### Back-End
+
+- Nodejs
+- Expressjs
+- mongoDB
 - mongoose
 
-## ☘️ Package.json
+<br/>  
 
-```jsx
-{
-  "name": "albalogserver",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node index.js",
-    "dev": "nodemon --exec babel-node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/godtaehee/AlbalogServer.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/godtaehee/AlbalogServer/issues"
-  },
-  "homepage": "https://github.com/godtaehee/AlbalogServer#readme",
-  "dependencies": {
-    "@babel/core": "^7.14.0",
-    "@babel/node": "^7.13.13",
-    "@babel/preset-env": "^7.14.0",
-    "@sendgrid/mail": "^7.4.4",
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.12.7",
-    "morgan": "^1.10.0",
-    "validator": "^13.6.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  }
-}
-```
-
-## ❗ 프로젝트 진행
+## 개발 내용
 
 <details>
+<summary>1주차</summary> 
 
-- [0주차](https://www.youtube.com/watch?v=A76W9kts5u4) - 오리엔테이션 & 팀 빌딩
+  ### Implements
 
-    개발자의 품격님이 임의로 지정해주신 팀원을 바탕으로 오리엔테이션을 진행하였습니다.
+  - 관리자 회원가입
+  - 매장 등록, 수정, 입장 (kakao 주소검색 api 이용)
+  - 로그인 유지, 로그아웃 (access Token + LocalStorage)
+  - 관리자 로그인
+  - 직원 초대 기능 (이메일 전송 )
+  - 공지 등록, 수정, 삭제, 리스트 (ckEditor5를 이용하여 글쓰기 구현)
+  - 스케줄러 구현
+  - 각 페이지 접근 권한 설정 ( 관리자만 입장가능, 직원만 입장가능, 미 로그인시 접속 불가능)
+
+  ### Issue
+
+- 회원가입 유효성 체크
+  
+- 매장 삭제 부분은 넣을려다가 , 삭제를 했을 경우 해당 데이터가 다 날라가기 때문에 , 매장 status를 만들어서 운영중, 폐업 과 같은 상태로 관리하려 함
+    
+- 로그인 부분 보안을 위해 기존 accessToken의 유효기간을 줄이고 refreshToken 도입 예정
+
+- 공지사항 게시물 리스트 순서를 역순으로 해야함
+- 공지사항 이미지 업로드 구현 예정
+  
+### Styles
+
+- 웹 메인 컬러 : rgb(18, 113, 175)로 테마 설정
+- 매장 삭제 부분은 넣을려다가 , 삭제를 했을 경우 해당 데이터가 다 날라가기 떄문에 , 매장 status를 만들어서 운영중, 폐업 과 같은 상태로 관리하려 함
+  
+</details>
+
+<details>
+<summary>2주차</summary> 
+
+
+  ### Implements
+
+  - 직원 로그인, 회원가입
+  - 직원 계정정보 수정
+  - 관리자 계정정보 수정
+  - 관리자가 직원 시급정보 수정
+  - 업무메뉴얼 CRUD
+  - 직원 대시보드
+  - 직원 출퇴근
+  - 매장 직원 리스트 나열
+  
+  ### Fix
+  - 공지사항 최신순 나열
+  - 각 페이지 접근권한 설정
+  - 스케줄 Date 전송 방식
+  
+  ### Issue
+
+  - *회원가입 유효성 체크*
+  - *공지사항 이미지*
+  - embedded document 쿼리 방식
+  - 
+  
+  ### Styles
+
+  - 매장 UI 수정
+  - 로그인 페이지 UI 수정
+  - favicon 제작
+
 </details>
 
 
-- [1주차](https://www.youtube.com/watch?v=JmbHsfjhjSY&list=PLqbWuGdVBJd1bukVXopWjl5mUevBtj04h&index=3) - 아이템 선정 및 발표
+## 파트 소개
+| 이름  |  메인 역할  |
+|:----:|:-------:|
+| [서우리](https://github.com/Alexis1226) | `프론트엔드` |
+| [이도현](https://github.com/ksmfou98) | `프론트엔드` |
+| [윤영훈](https://github.com/yoonyounghoon) | `프론트엔드` |
+| [정원석](https://github.com/Dseok12) | `프론트엔드` |
+| [김동완](https://github.com/dongwandonkim)  | `백엔드` |
+| [김태희](https://github.com/godtaehee)  | `백엔드` |  
 
-    저희 팀은 각자 해보고싶은 아이디어를 발표했고 그중에 아르바이트생과 사장님 사이에서 일어날수있는 다양한 이슈를 관리해주는 웹 애플리케이션을 만들고자 했습니다
-
-- [2주차](https://www.youtube.com/watch?v=UmeayBglVwM&list=PLqbWuGdVBJd1bukVXopWjl5mUevBtj04h&index=4) - 벤치마킹
-
-    [벤치마킹.key](%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%87%E1%85%A1%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%20(Node%20js)%20d8ef4b53f0654390a17ed615190fd9e5.key)
-
-    국내 14개, 해외 2개를 벤치마킹하여 각각의 사이트가 어필하는 기능과 디테일한 기능까지 모두 조사하여 비공개 Google Sheet에 공통된 기능을 정리하고 새로운 기능까지 정리하여 저희 웹 애플리케이션의 기능을 구현하는데 있어서 많은 참고를 할수 있었습니다. 2번째 컬럼에 기능별로 중요도를 설정하여 A인 기능 우선으로 기능구현을 하기로 했습니다.
-
-    ![%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%87%E1%85%A1%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%20(Node%20js)%20d8ef4b53f0654390a17ed615190fd9e5/_2021-06-17__11.16.57.png](%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%87%E1%85%A1%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%20(Node%20js)%20d8ef4b53f0654390a17ed615190fd9e5/_2021-06-17__11.16.57.png)
-
-- [3주차](https://www.youtube.com/watch?v=SKp-M7y54rc&list=PLqbWuGdVBJd1bukVXopWjl5mUevBtj04h&index=4) - 사용자 분석 및 기능 설계
-
-    ![%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%87%E1%85%A1%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%20(Node%20js)%20d8ef4b53f0654390a17ed615190fd9e5/_2021-06-17__11.22.35.png](%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%87%E1%85%A1%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%20(Node%20js)%20d8ef4b53f0654390a17ed615190fd9e5/_2021-06-17__11.22.35.png)
-
-    저희 서비스의 사용자는 매장관리와 아르바이트생 관리가 힘든 모든 자영업 사장님을 대상으로 하고있으며 앞서 벤치마킹했던 내용을 토대로 마인드맵으로 기능들을 구체화 했습니다. 이러한 기능설계를 함에있어서 벤치마킹했던 내용이 크게 도움이 되었습니다.
-
-- [5주차](https://www.youtube.com/watch?v=htXO6oxzgBM&list=PLqbWuGdVBJd1bukVXopWjl5mUevBtj04h&index=5) - Wireframe 설계
-
-    카카오 오븐을 통해 저희 팀은 3주차의 기능설계 마인드맵을 토대로 분담하여 Wireframe을 작성했습니다. 다음은 제가 맡은 공지사항과 업무 메뉴얼의 Wireframe 입니다.
-
-    - PC버전 - 공지사항, 업무메뉴얼
-
-        ![%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%87%E1%85%A1%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%20(Node%20js)%20d8ef4b53f0654390a17ed615190fd9e5/_2021-06-17__11.35.39.png](%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%87%E1%85%A1%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%20(Node%20js)%20d8ef4b53f0654390a17ed615190fd9e5/_2021-06-17__11.35.39.png)
-
-        ![%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%87%E1%85%A1%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%20(Node%20js)%20d8ef4b53f0654390a17ed615190fd9e5/_2021-06-17__11.35.49.png](%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%87%E1%85%A1%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%20(Node%20js)%20d8ef4b53f0654390a17ed615190fd9e5/_2021-06-17__11.35.49.png)
-
-    - 모바일버전 - 공지사항, 업무메뉴얼
-
-        ![%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%87%E1%85%A1%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%20(Node%20js)%20d8ef4b53f0654390a17ed615190fd9e5/_2021-06-17__11.36.51.png](%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%87%E1%85%A1%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%20(Node%20js)%20d8ef4b53f0654390a17ed615190fd9e5/_2021-06-17__11.36.51.png)
-
-        ![%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%87%E1%85%A1%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%20(Node%20js)%20d8ef4b53f0654390a17ed615190fd9e5/_2021-06-17__11.37.04.png](%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%87%E1%85%A1%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%20(Node%20js)%20d8ef4b53f0654390a17ed615190fd9e5/_2021-06-17__11.37.04.png)
-
-- [6주차](https://www.youtube.com/watch?v=JAeF2zukJYA&list=PLqbWuGdVBJd1bukVXopWjl5mUevBtj04h&index=6) - UI 구현
-
-    프론트분들이 React를 사용하여 화면구현을 하셨습니다. Wireframe에 있는 그대로 구현을 하셨고 추후 백엔드와 합치면서 변경사항이 생기면 프론트와 백엔드 모두 변경사항을 적용해서 변경될 예정입니다.
-
-    [4조 - UI.pdf](%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%87%E1%85%A1%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%20(Node%20js)%20d8ef4b53f0654390a17ed615190fd9e5/4_-_UI.pdf)
-
-- [7주차](https://www.youtube.com/watch?v=sZYyuJStlqA&list=PLqbWuGdVBJd1bukVXopWjl5mUevBtj04h&index=7) - 데이터베이스 설계
-
-    백엔드 3명이서 같이 디비설계를 하고 매주 피드백을 품격님께 받아서 업데이트 하거나 개발 도중 발생한 이슈에 따라 수정했습니다.
-
-    ![%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%87%E1%85%A1%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%20(Node%20js)%20d8ef4b53f0654390a17ed615190fd9e5/_2021-06-17__11.32.44.png](%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%87%E1%85%A1%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%20(Node%20js)%20d8ef4b53f0654390a17ed615190fd9e5/_2021-06-17__11.32.44.png)
-
-- [8주차](https://www.youtube.com/watch?v=lHbe_nmVMPI&list=PLqbWuGdVBJd1bukVXopWjl5mUevBtj04h&index=8) - 구현 1주차
-    - MongoDB를 사용하여 구현했습니다.
-    - 관리자 회원가입
-    - 매장 등록, 수정, 입장 (kakao 주소검색 api 이용)
-    - 로그인 유지, 로그아웃 (access Token + LocalStorage)
-    - 관리자 로그인
-    - 직원 초대 기능 (이메일 전송 )
-    - 공지 등록, 수정, 삭제, 리스트 (ckEditor5를 이용하여 글쓰기 구현)
-    - 스케줄러 구현
-    - 각 페이지 접근 권한 설정 ( 관리자만 입장가능, 직원만 입장가능, 미 로그인시 접속 불가능)
-    - Category CRUD
-    - Category 보여주는 방식에서 _id가 아닌 name으로 보여줘야하는 이슈 발생 및 해결
-    - Notice CRUD
-    - Notice Embeded in Location
-    - WorkManual CRUD
-    - WorkManual Embeded in Location
-    - checkHasUserLocation 미들웨어 삭제
-
-    - Category
-        - ~~Category CRUD~~
-        - ~~Category 보여주는 방식에서 _id가 아닌 name으로 보여줘야하는 이슈 발생 및 해결~~
-    - Notice
-        - ~~Notice CRUD~~
-        - 
-    - WorkManual
-    - Transition
-    - TimeClock
-- 9주차 - 구현 2주차
