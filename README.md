@@ -60,11 +60,9 @@
 
 ## DataBase
 
-
-<img src="https://user-images.githubusercontent.com/64634992/121452799-05f69900-c9db-11eb-9cc1-a8b569f6d539.png" align="left" height="450" width="1100" />    
-
-📕📕
-<br/>
+<div>
+<img src="https://user-images.githubusercontent.com/44861205/122632213-57ee9b80-d10c-11eb-9bad-b6125c2ca389.jpeg" align="left" height="450" width="1100" />    
+</div>
 
 
 ## API DOCS
